@@ -1,0 +1,101 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #FFA500FF;
+    --bg-gradient: linear-gradient(#2f4858, #006572, #00826e, #3e9a4c, #9aa813, #FFA500FF)
+}
+
+html, body {
+    min-height: 120%;
+}
+
+body {
+    background: var(--bg-gradient);
+    color: var(--primary-color);
+    font-size: 110%;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+small {
+    color: var(--secondary-color)
+}
+
+hr {
+    color: var(--primary-color);
+    width: 90%;
+}
+
+cite {
+    text-align: right;
+    display: block;
+}
+
+.title {
+    color: var(--secondary-color)
+}
+
+.container-fluid {
+    width: 70%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    margin: auto;
+}
+
+.stars-container {
+    width: 100px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+    color: var(--secondary-color);
+}
+
+.stars-desc {
+    padding: 0 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.stars-row {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.title {
+    font-weight: 800;
+}
+
+.card {
+    border: 2px solid var(--primary-color);
+    transition: 0.3s;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1vh;
+    margin-bottom: 10px;
+}
+
+.card-title {
+}
+
+.row {
+    display:flex
+}
+
+.inner-card {
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+}
+
+/*.card:hover {
+    border: 2px solid black;
+}*/
