@@ -1,11 +1,13 @@
 :root {
     --primary-color: white;
     --secondary-color: #FFA500FF;
-    --bg-gradient: linear-gradient(#2f4858, #006572, #00826e, #3e9a4c, #9aa813, #FFA500FF)
+    --start-color: #2f4858;
+    --bg-gradient: linear-gradient(var(--start-color), #006572, #00826e, #3e9a4c, #9aa813, var(--secondary-color))
 }
 
 html, body {
-    min-height: 120%;
+    height: fit-content;
+    margin-bottom: 15%;
 }
 
 body {
@@ -17,6 +19,10 @@ body {
 h2 {
     padding: 0;
     margin: 0;
+}
+
+p {
+    text-align: left;
 }
 
 a {
@@ -64,6 +70,11 @@ cite {
     width: 100%;
 }
 
+.stars-desc > i {
+    width: 30px;
+    text-align: center;
+}
+
 .stars-row {
     margin-bottom: 10px;
     display: flex;
@@ -94,6 +105,23 @@ cite {
     padding: 10px;
     margin: 10px;
     width: 50%;
+}
+
+.contacts-list {
+    display: flex;
+    gap: 3%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.contacts-link {
+    margin-bottom: 0;
+}
+
+.contacts-link > a {
+    color: var(--primary-color);
 }
 
 /*.card:hover {
