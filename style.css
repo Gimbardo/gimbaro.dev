@@ -7,7 +7,7 @@
 
 html, body {
     height: fit-content;
-    margin-bottom: 15%;
+    margin-bottom: 20%;
 }
 
 body {
@@ -124,6 +124,10 @@ cite {
     color: var(--primary-color);
 }
 
-/*.card:hover {
-    border: 2px solid black;
-}*/
+.card:hover {
+    border: 2px solid var(--secondary-color);
+}
+
+.card:hover h2 {
+    color: var(--secondary-color)
+}
