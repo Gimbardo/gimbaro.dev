@@ -1,4 +1,3 @@
-
 let droplet = document.getElementById("droplet")
 let main = document.getElementById("main-title")
 
@@ -7,8 +6,14 @@ handleRain()
 let chevron = document.getElementById("chevron-title")
 window.addEventListener('scroll', handleChevronOpacity);
 
-var options = {
-   strings: ["Gimbaro <i class=\"fa-solid fa-code\"></i>", "Gamberi Elia <i class=\"fa-solid fa-shrimp\"></i>", "Gimbo <i class=\"fa-solid fa-dragon\"></i>"],
+titles = [
+   "Gimbaro <i class=\"fa-solid fa-code\"></i>",
+   "Gamberi Elia <i class=\"fa-solid fa-shrimp\"></i>",
+   "Gimbo <i class=\"fa-solid fa-dragon\"></i>"
+]
+
+new Typed("#typed-title", {
+   strings: titles,
    loop: true,
    typeSpeed: 50,
    backSpeed: 25,
@@ -16,10 +21,7 @@ var options = {
    backDelay: 2000,
    showCursor: true,
    cursorChar: "|",
-};
-
-var typed = new Typed("#typed-title", options);
-
+});
 
 
 function handleRain() {
