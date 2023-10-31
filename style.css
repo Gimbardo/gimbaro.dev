@@ -87,6 +87,12 @@ cite {
     margin: auto;
 }
 
+@media only screen and (max-width: 1281px) {
+    .container-fluid {
+        width: 90%;
+    }
+}
+
 .stars-container {
     width: 100px;
     display: grid;
