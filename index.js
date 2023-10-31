@@ -7,6 +7,21 @@ handleRain()
 let chevron = document.getElementById("chevron-title")
 window.addEventListener('scroll', handleChevronOpacity);
 
+var options = {
+   strings: ["Gimbaro <i class=\"fa-solid fa-code\"></i>", "Gamberi Elia <i class=\"fa-solid fa-shrimp\"></i>", "Gimbo <i class=\"fa-solid fa-dragon\"></i>"],
+   loop: true,
+   typeSpeed: 50,
+   backSpeed: 25,
+   startDelay: 500,
+   backDelay: 2000,
+   showCursor: true,
+   cursorChar: "|",
+};
+
+var typed = new Typed("#typed-title", options);
+
+
+
 function handleRain() {
    setTimeout(async function () {
       createNewDroplet()

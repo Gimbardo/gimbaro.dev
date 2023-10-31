@@ -9,5 +9,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="85cc9d98ce" level="application" />
+    <orderEntry type="library" name="typed.js" level="application" />
+    <orderEntry type="library" name="85cc9d98ce" level="application" />
   </component>
 </module>
