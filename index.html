@@ -5,26 +5,40 @@
     <title>Gimbaro</title>
     <link rel="icon" type="image/x-icon" href="public/images/quag.gif">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="splash.css">
     <script src="https://kit.fontawesome.com/85cc9d98ce.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
 </head>
 <body>
-<div class="container-fluid">
+<div class="main" id="main-title">
+    <div class="rain" id="droplet">
+        <div class="drop"></div>
+        <div class="waves">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="splash"></div>
+        <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <h1 class="title">Hi, I'm Gamberi Elia <i class="fa-solid fa-code"></i></h1>
-    <section class="card">
-        <div class="inline">
-            <img src="public/images/me.jpg" class="avatar" alt="Avatar">
-            <div>
-                <p>
-                    Welcome to my site, my name is <b>Gamberi Elia</b>,
-                    an Italian Full Stack Web Developer, currently working for Engim Srl.
-                </p>
-                <p>
-                    Ruby on Rails is my go-to framework for web development, but I always try to find new technologies
-                    that better suit the issues that I'm facing. This continuous search allowed me to learn a lot
-                    of new <i>languages, frameworks and templates</i>. Here's a list of some of them.
-                </p>
-            </div>
+    <a href="#summarize-section" class="chevron" id="chevron-title"><i class="fa-solid fa-chevron-down"></i></a>
+</div>
+<div class="container-fluid">
+    <section class="card" id="summarize-section">
+        <div>
+            <p>
+                Welcome to my site, my name is <b>Gamberi Elia</b>,
+                an Italian Full Stack Web Developer, currently working for Engim Srl.
+            </p>
+            <p>
+                Ruby on Rails is my go-to framework for web development, but I always try to find new technologies
+                that better suit the issues that I'm facing. This continuous search allowed me to learn a lot
+                of new <i>languages, frameworks and templates</i>. Here's a list of some of them.
+            </p>
         </div>
 
         <div class="container-fluid">
@@ -237,5 +251,6 @@
     </section>
 </div>
 
+<script src="index.js"></script>
 </body>
 </html>
