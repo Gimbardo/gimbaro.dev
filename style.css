@@ -2,12 +2,11 @@
     --primary-color: white;
     --secondary-color: #FFA500FF;
     --start-color: #2f4858;
-    --bg-gradient: linear-gradient(var(--start-color), #006572, #00826e, #3e9a4c, #9aa813, var(--secondary-color))
+    --bg-gradient: linear-gradient(var(--start-color), #006572, #00826e, #3e9a4c, #9aa813)
 }
 
 html, body {
     height: fit-content;
-    margin-bottom: 20%;
     scroll-behavior: smooth;
 }
 
