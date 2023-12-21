@@ -32,8 +32,8 @@ function handleRain() {
 
 function createNewDroplet() {
    let new_drop = droplet.cloneNode(true)
-   new_drop.style.top = `${getRandomInt(0, 90)}vh`;
-   new_drop.style.left = `${getRandomInt(0, 90)}vw`;
+   new_drop.style.top = `${getRandomInt(0, 100)}vh`;
+   new_drop.style.left = `${getRandomInt(0, 80)}vw`;
    new_drop.style.display = "unset"
    main.appendChild(new_drop)
    handleRain();
