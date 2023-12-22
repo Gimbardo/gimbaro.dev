@@ -8,6 +8,8 @@
 html, body {
     height: fit-content;
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
