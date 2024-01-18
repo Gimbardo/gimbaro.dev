@@ -131,8 +131,20 @@ cite {
 }
 
 .card:hover {
-    transition-duration: 60s;
-    transform: rotate(90deg);
+    animation-name: silly-guy;
+    animation-duration: 69s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes silly-guy {
+    50% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .row {
