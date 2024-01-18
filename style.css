@@ -130,7 +130,9 @@ cite {
     margin-bottom: 10px;
 }
 
-.card-title {
+.card:hover {
+    transition-duration: 1s;
+    transform: rotate(90deg);
 }
 
 .row {
