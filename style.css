@@ -131,7 +131,7 @@ cite {
 }
 
 .card:hover {
-    transition-duration: 1s;
+    transition-duration: 60s;
     transform: rotate(90deg);
 }
 
