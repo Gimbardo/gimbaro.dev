@@ -2,7 +2,7 @@
     --primary-color: white;
     --secondary-color: #FFA500FF;
     --start-color: #2f4858;
-    --bg-gradient: linear-gradient(var(--start-color), #006572, #00826e, #3e9a4c, #9aa813)
+    --background: linear-gradient(var(--start-color), #006572, #00826e, #3e9a4c);
 }
 
 html, body {
@@ -19,7 +19,7 @@ html, body {
 }
 
 body {
-    background: var(--bg-gradient);
+    background: var(--background);
     color: var(--primary-color);
     font-size: 110%;
 }
