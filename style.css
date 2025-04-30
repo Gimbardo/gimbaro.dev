@@ -1,8 +1,14 @@
-:root {
-    --primary-color: white;
+body {
+    --primary-color: #e0e0e0;
     --secondary-color: #FFA500FF;
     --start-color: #2f4858;
-    --background: linear-gradient(var(--start-color), #006572, #00826e, #3e9a4c);
+    --background: -webkit-linear-gradient(var(--start-color), #006572, #00826e, #3e9a4c);
+    font-size: 120%;
+}
+
+body.dark-mode {
+    --secondary-color: #80cbc4;
+    --background: #121212;
 }
 
 html, body {
@@ -21,7 +27,6 @@ html, body {
 body {
     background: var(--background);
     color: var(--primary-color);
-    font-size: 110%;
 }
 
 h2 {
@@ -77,7 +82,7 @@ cite {
     text-align: center;
     font-size: 2em;
     font-weight: bolder;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .container-fluid {
@@ -164,4 +169,39 @@ cite {
 
 .card:hover h2 {
     color: var(--secondary-color)
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--background);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 0.2rem 0.5rem var(--secondary-color);
+}
+
+#dark-mode-toggle.hidden {
+    display: none;
 }

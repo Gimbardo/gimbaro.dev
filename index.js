@@ -23,6 +23,38 @@ new Typed("#typed-title", {
    cursorChar: "|",
 });
 
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const darkModeIcon = document.getElementById('dark-mode-icon');
+
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    if (document.body.classList.contains('dark-mode')) {
+        darkModeIcon.classList.remove('fa-sun');
+        darkModeIcon.classList.add('fa-moon');
+    } else {
+        darkModeIcon.classList.remove('fa-moon');
+        darkModeIcon.classList.add('fa-sun');
+    }
+});
+
+darkModeIcon.classList.add('fa-sun');
+
+document.addEventListener("scroll", () => {
+    const chevron = document.getElementById("chevron-title");
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+    if (chevron && darkModeToggle) {
+        const chevronRect = chevron.getBoundingClientRect();
+        const toggleRect = darkModeToggle.getBoundingClientRect();
+
+        if (toggleRect.top > chevronRect.bottom) {
+            darkModeToggle.classList.add("hidden");
+        } else {
+            darkModeToggle.classList.remove("hidden");
+        }
+    }
+});
 
 function handleRain() {
    setTimeout(async function () {
@@ -52,4 +84,28 @@ function getRandomInt(min, max) {
    max = Math.floor(max);
    return Math.floor(Math.random() * (max - min) + min);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lazyImages = document.querySelectorAll("img[loading='lazy']");
+
+    const onIntersection = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.onload = () => img.classList.add("loaded");
+                observer.unobserve(img);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(onIntersection, {
+        rootMargin: "50px",
+        threshold: 0.1
+    });
+
+    lazyImages.forEach(img => {
+        observer.observe(img);
+    });
+});
 
