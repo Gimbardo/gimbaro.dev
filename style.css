@@ -66,10 +66,11 @@ cite {
 }
 
 .avatar {
-    width: 17vh;
-    height: 17vh;
-    border-radius: 50%;
-    margin: 1%;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 1rem;
 }
 
 .title {
@@ -91,12 +92,6 @@ cite {
     align-self: center;
     align-content: center;
     margin: auto;
-}
-
-@media only screen and (max-width: 1281px) {
-    .container-fluid {
-        width: 90%;
-    }
 }
 
 .stars-container {
@@ -136,14 +131,36 @@ cite {
 }
 
 .row {
-    display: flex
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
 .inner-card {
+    flex: 0 0 33%;
     text-align: left;
     padding: 10px;
     margin: 10px;
     width: 50%;
+}
+
+@media only screen and (max-width: 1281px) {
+    .container-fluid {
+        width: 80%;
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .inner-card {
+        flex: 0 0 100%;
+    }
 }
 
 .contacts-list {
@@ -169,16 +186,6 @@ cite {
 
 .card:hover h2 {
     color: var(--secondary-color)
-}
-
-@media (max-width: 768px) {
-    .main {
-        padding: 10px;
-    }
-
-    .title {
-        font-size: 1.5rem;
-    }
 }
 
 #dark-mode-toggle {

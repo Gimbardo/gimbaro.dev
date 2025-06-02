@@ -85,6 +85,22 @@ function getRandomInt(min, max) {
    return Math.floor(Math.random() * (max - min) + min);
 }
 
+async function getSpaggiomatic() {
+    const url = "https://spaggomatic.gimbaro.dev/";
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+
+        const json = await response.json();
+        return "On this day, in "+json["year"]+", "+json["fact"];
+    } catch (error) {
+        console.error(error.message);
+    }
+    return "Error retrieving data, reload to retry :)";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const lazyImages = document.querySelectorAll("img[loading='lazy']");
 
@@ -107,5 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
     lazyImages.forEach(img => {
         observer.observe(img);
     });
+    getSpaggiomatic().then( (result) => {
+        document.getElementById("spaggomatic-demo").innerText = result;
+    })
 });
 
