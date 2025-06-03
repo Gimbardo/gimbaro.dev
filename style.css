@@ -115,6 +115,7 @@ cite {
 .stars-row {
     margin-bottom: 10px;
     display: flex;
+    padding: 10px;
 }
 
 .title {
@@ -142,12 +143,17 @@ cite {
     text-align: left;
     padding: 10px;
     margin: 10px;
-    width: 50%;
 }
 
-@media only screen and (max-width: 1281px) {
+@media screen and (max-width: 1281px) {
+
+    .avatar {
+        width: 70%;
+        max-width: 100px;
+    }
+
     .container-fluid {
-        width: 80%;
+        width: 90%;
     }
 
     .main {
@@ -160,6 +166,7 @@ cite {
 
     .inner-card {
         flex: 0 0 100%;
+        max-width: 80%;
     }
 }
 
